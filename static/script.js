@@ -18,7 +18,7 @@
     document.querySelectorAll(".menu-item").forEach(function (element) {
         element.addEventListener("click", async function (event) {
             event.preventDefault();
-            history.pushState(null, null, `/${element.id}`? element.id !== "main" : "/");
+            history.pushState(null, null, element.id !== "main" ? `/${element.id}`: "/");
 
             await fetchAndRender();
         });
